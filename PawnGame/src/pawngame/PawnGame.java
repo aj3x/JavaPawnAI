@@ -15,9 +15,15 @@ public class PawnGame {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int x = 5;
+        int x = 3;
         int y = 6;
         
+        int bStartRow = 2;
+        int wStartRow = 4;
+        
+        Board b = new Board(x,y);
+        b.Initialize(bStartRow, wStartRow);
+        System.out.println(b.toString());
     }
     
 }
