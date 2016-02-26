@@ -52,7 +52,7 @@ abstract public class GameTreeSearch {
     
     m_countNodesVisited = 0;
     GameTreeNode n = MinimaxValue(new GameTreeNode(s,0,0), MaxMovesFirst);  
-    timer.stop();
+    //timer.stop();
     System.out.println("Best value: " + n.m_value);
     System.out.println("Visited " + m_countNodesVisited + " nodes.");
     return n.m_state;

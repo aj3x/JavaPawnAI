@@ -9,15 +9,6 @@ package pawngame;
  *
  * @author AJ3X
  */
-public class PawnGame {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        int x = 5;
-        int y = 6;
-        
-    }
+public class BoardNode {
     
 }
