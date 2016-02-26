@@ -5,6 +5,7 @@
  */
 package pawngame;
 
+
 /**
  *
  * @author AJ3X
@@ -12,18 +13,26 @@ package pawngame;
 public class Board {
     int width,height;
     Pawn[][] board;
+    
+    Position[] whites;
+    Position[] blacks;
+    
     public Board(int width, int height){
         board = new Pawn[width][height];
         this.width = width;
         this.height = height;
+        whites = new Position[width];
+        blacks = new Position[width];
     }
     
     public void Initialize(int bRow,int wRow){
         for(int i=0;i<width;i++){
             for(int j=0;j<height;j++){
                 if(j==bRow){
+                    blacks[j] = new Position(i,j);
                     board[i][j] = new Pawn(false);
                 }else if(j==wRow){
+                    whites[j] = new Position(i,j);
                     board[i][j] = new Pawn(true);
                 }else{
                     board[i][j] = null;
@@ -33,6 +42,14 @@ public class Board {
     }
     
     
+    
+    public int getWidth(){
+        return width;
+    }
+    
+    public int getHeight(){
+        return height;
+    }
     
     public boolean hasPawn(int x,int y){
         if(board[x][y]==null)

@@ -24,6 +24,8 @@ public class PawnGame {
         Board b = new Board(x,y);
         b.Initialize(bStartRow, wStartRow);
         System.out.println(b.toString());
+        
+        
     }
     
 }
